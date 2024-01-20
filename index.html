@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.png.webp">
+    <title>Sign in</title>
+   
+</head>
+<body style="font-family: 'Poppins', sans-serif; background-image: url(	https://i.ibb.co/Q9LVYBY/bg-umage.jpg
+); display: flex; align-items: center; justify-content: center; padding-top: 40px;">
+    <section style="background-color: white; width: 400px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <div style="padding-left: 18px; padding-right: 18px; padding-top: 24px; padding-bottom: 36px;">
+            <div style="display: flex; flex-direction: column; gap: 18px;">  
+            <div style="display: flex; align-items: center; justify-content: center;">
+                <img src="https://i.ibb.co/VLVQfL7/picture-one.png
+                " alt="" style="width: 200px;">
+            </div>
+            <h2 style="font-size: 24px; font-weight: 400;">Sign in</h2>
+            <form id="signIn" style="display: flex; flex-direction: column; gap:22px">
+                <span style="font-size: 13px; color: green; text-align: center; display: none;" id="success">Successful!</span>
+                <div style="display: flex; flex-direction: column; gap:12px">
+                    <label for="email" style="font-size: 13px;">Email</label>
+                    <input type="email" name="email" id="email" required style="border-radius: 1px; font-size: 13px; height: 35px; padding: 2px 5px; border: 1px solid #bdbdbd">
+                    <span style="font-size: 13px; color: red;" id="error-mail"></span>
+                </div>
+                <div style="position: relative; display: flex; flex-direction: column; gap:12px">
+                    <label for="password" style="font-size: 13px;">Password</label>
+                    <div style="position: relative; display: flex; align-items: center;">
+                        <input type="password" name="password" id="password" style="border-radius: 1px; font-size: 13px; height: 35px; padding: 2px 25px 2px 5px; border: 1px solid #bdbdbd; flex-grow: 1;">
+                        <span style="position: absolute; top: 50%; transform: translateY(-50%); right: 5px; cursor: pointer; font-size: 13px;" id="displayPass" onclick="togglePassword()">show</span>
+                    </div>
+                    <span style="font-size: 13px; color: red;" id="error-pass"></span>
+                </div>
+                
+                <div style="display: flex; flex-direction: column; gap:14px">
+                    <input type="submit" value="Login" style="cursor: pointer; margin-right: auto; font-size: 14px; color: #ffffff; background: #094ab2; border-radius: 2px; border: 1px solid #094ab2; padding: 8px 35px; font-weight: 500;">
+                    <span style="color: #909090; text-align: center; font-size: 12px">By Logging in, you accept our <span style="text-decoration: underline; cursor: pointer;">End user Terms of use</span></span>
+                </div>
+                <div style="display: flex;  justify-content: space-between;">
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <span style="font-size: 12px; color: #909090">Remember me</span>
+                    </div>
+                        <a style="font-size: 12px; color: #909090; text-decoration: underline; cursor: pointer;">forgot password?</a>
+    
+                </div>
+            </form>
+        </div>
+        </div>
+    </section>
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
